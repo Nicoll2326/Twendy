@@ -1,0 +1,227 @@
+<!-- inicio de el encabezado-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pagina 18 </title>
+    <link rel="stylesheet" href="pagina12.css">
+    <script src="https://kit.fontawesome.com/d05ddce44d.js" crossorigin="anonymous"></script>
+</head>
+    <!-- Inicio del encabezado -->
+    <header class="header"> 
+
+        <select id="Filtar" class="clase_filtro"> 
+            <option value="Filtar"> Filtros</option>
+            <option value="A>Z"> A > Z </option>
+            <option value="Z>A"> Z > A </option>
+            <option value="+>-"> + > - </option>
+            <option value="->+"> - > + </option>
+
+         <input type="checkbox" id="check">
+         <input type="text" placeholder="   Buscar..." class="buscador"><i class="fa-solid fa-magnifying-glass lupa"></i></i> <i class="fa-solid fa-xmark cerrar"></i>
+
+         <label for="check" class="mostrar_menu"></label>
+         <nav class="menu">
+            <ul>
+                
+                <li><a href="#">Información</a></li>
+                <li><a href="#"> Actualizar datos </a></li>
+                <li><a href="#">Reportes</a>
+                    <ul>
+                        <li><a href="#">Diarios</a></li>
+                        <li><a href="#">Semanal</a></li>
+                        <li><a href="#">Quincenal</a></li>
+                        <li><a href="#">Mensual</a></li>
+                        <li><a href="#">Trimestral</a></li>
+                        <li><a href="#">Semestral</a></li>
+                        <li><a href="#">Anual</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Diagramas</a>
+                    <ul>
+                        <li><a href="#">Lineas</a></li>
+                        <li><a href="#">Barras</a></li>
+                        <li><a href="#">Circulares</a></li>
+                    </ul>
+                </li>
+                <a href="pagina18.2.html"><i class="fa-solid fa-right-to-bracket exit"></i></a>
+            </ul>
+            
+         <label for="check" class="esconder_menu">
+         </label>
+         </nav>
+ 
+</header>
+<!-- fin de el encabezado -->
+        
+<body>
+    <br>
+    <br>
+    <button id="add-row-btn" class="botones"> + </button>
+    <br>
+    <br>
+    <div class="container">
+        
+        <table class="tabla-negra" id="inventory-table" >
+
+            <tr>
+                <th>Codigo</th>
+                <th>Producto</th>
+                <th>Descrip</th>
+                <th>Cantidad Inventario</th>
+                <th>Ventas Inventario</th>
+                <th>Entradas</th>
+                <th>Salidas</th>
+                <th>Precio X Und</th>
+                <th>Costo por Und</th>
+                <th>Cantidad</th>
+                <th>Cantidad total</th>
+                <th>Total ventas</th>
+                <th>Total compra</th>
+                <th>Utilidad producto</th>
+                <th>Opcion</th>
+            </tr>
+            <tr>
+    
+                <td><input type="text" id="codigo"></td>
+                <td><input type="text" id="producto"></td>
+                <td><input type="text" id="descripcion"></td>
+                <td><input type="number" id="cantidadInventario"></td>
+                <td><input type="number" id="ventasInventario"></td>
+                <td><input type="number" id="entrada"></td>
+                <td><input type="number" id="salida"></td>
+                <td><input type="text" id="precio_x_Und"></td>
+                <td><input type="text" id="costo_x_Und"></td>
+                <td><input type="text" id="cantidad"></td>
+                <td><input type="text" id="cantidad_Total"></td>
+                <td><input type="text" id="Total ventas"></td>
+                <td><input type="text" id="Total_compra"></td>
+                <td><input type="text" id="Utilidad producto"></td>
+                <td><i class="fa-solid fa-trash-can eliminar_celda"></i></td> 
+            </tr>
+
+            <tr>
+          
+                <td><input type="text" id="codigo"></td>
+                <td><input type="text" id="producto"></td>
+                <td><input type="text" id="descripcion"></td>
+                <td><input type="number" id="cantidadInventario"></td>
+                <td><input type="number" id="ventasInventario"></td>
+                <td><input type="number" id="entrada"></td>
+                <td><input type="number" id="salida"></td>
+                <td><input type="text" id="precio_x_Und"></td>
+                <td><input type="text" id="costo_x_Und"></td>
+                <td><input type="text" id="cantidad"></td>
+                <td><input type="text" id="cantidad_Total"></td>
+                <td><input type="text" id="Total ventas"></td>
+                <td><input type="text" id="Total_compra"></td>
+                <td><input type="text" id="Utilidad producto"></td>
+                <td><i class="fa-solid fa-trash-can eliminar_celda"></i></td> 
+            </tr>
+
+            <tr>             
+                <td><input type="text" id="codigo"></td>
+                <td><input type="text" id="producto"></td>
+                <td><input type="text" id="descripcion"></td>
+                <td><input type="number" id="cantidadInventario"></td>
+                <td><input type="number" id="ventasInventario"></td>
+                <td><input type="number" id="entrada"></td>
+                <td><input type="number" id="salida"></td>
+                <td><input type="text" id="precio_x_Und"></td>
+                <td><input type="text" id="costo_x_Und"></td>
+                <td><input type="text" id="cantidad"></td>
+                <td><input type="text" id="cantidad_Total"></td>
+                <td><input type="text" id="Total ventas"></td>
+                <td><input type="text" id="Total_compra"></td>
+                <td><input type="text" id="Utilidad producto"></td>
+                <td><i class="fa-solid fa-trash-can eliminar_celda"></i></td> 
+            </tr>
+
+            <tr>
+               
+                <td><input type="text" id="codigo"></td>
+                <td><input type="text" id="producto"></td>
+                <td><input type="text" id="descripcion"></td>
+                <td><input type="number" id="cantidadInventario"></td>
+                <td><input type="number" id="ventasInventario"></td>
+                <td><input type="number" id="entrada"></td>
+                <td><input type="number" id="salida"></td>
+                <td><input type="text" id="precio_x_Und"></td>
+                <td><input type="text" id="costo_x_Und"></td>
+                <td><input type="text" id="cantidad"></td>
+                <td><input type="text" id="cantidad_Total"></td>
+                <td><input type="text" id="Total ventas"></td>
+                <td><input type="text" id="Total_compra"></td>
+                <td><input type="text" id="Utilidad producto"></td>
+                <td><i class="fa-solid fa-trash-can eliminar_celda"></i></td> 
+            </tr>
+
+            <tr>
+                
+                <td><input type="text" id="codigo"></td>
+                <td><input type="text" id="producto"></td>
+                <td><input type="text" id="descripcion"></td>
+                <td><input type="number" id="cantidadInventario"></td>
+                <td><input type="number" id="ventasInventario"></td>
+                <td><input type="number" id="entrada"></td>
+                <td><input type="number" id="salida"></td>
+                <td><input type="text" id="precio_x_Und"></td>
+                <td><input type="text" id="costo_x_Und"></td>
+                <td><input type="text" id="cantidad"></td>
+                <td><input type="text" id="cantidad_Total"></td>
+                <td><input type="text" id="Total ventas"></td>
+                <td><input type="text" id="Total_compra"></td>
+                <td><input type="text" id="Utilidad producto"></td>
+                <td><i class="fa-solid fa-trash-can eliminar_celda"></i></td> 
+            </tr>
+
+            <tr>
+                
+                <td><input type="text" id="codigo"></td>
+                <td><input type="text" id="producto"></td>
+                <td><input type="text" id="descripcion"></td>
+                <td><input type="number" id="cantidadInventario"></td>
+                <td><input type="number" id="ventasInventario"></td>
+                <td><input type="number" id="entrada"></td>
+                <td><input type="number" id="salida"></td>
+                <td><input type="text" id="precio_x_Und"></td>
+                <td><input type="text" id="costo_x_Und"></td>
+                <td><input type="text" id="cantidad"></td>
+                <td><input type="text" id="cantidad_Total"></td>
+                <td><input type="text" id="Total ventas"></td>
+                <td><input type="text" id="Total_compra"></td>
+                <td><input type="text" id="Utilidad producto"></td>
+                <td><i class="fa-solid fa-trash-can eliminar_celda"></i></td> 
+            </tr>
+
+            <tr>
+                
+                <td><input type="text" id="codigo"></td>
+                <td><input type="text" id="producto"></td>
+                <td><input type="text" id="descripcion"></td>
+                <td><input type="number" id="cantidadInventario"></td>
+                <td><input type="number" id="ventasInventario"></td>
+                <td><input type="number" id="entrada"></td>
+                <td><input type="number" id="salida"></td>
+                <td><input type="text" id="precio_x_Und"></td>
+                <td><input type="text" id="costo_x_Und"></td>
+                <td><input type="text" id="cantidad"></td>
+                <td><input type="text" id="cantidad_Total"></td>
+                <td><input type="text" id="Total ventas"></td>
+                <td><input type="text" id="Total_compra"></td>
+                <td><input type="text" id="Utilidad producto"></td>
+                <td><i class="fa-solid fa-trash-can eliminar_celda"></i></td> 
+            </tr>
+            
+        </table>
+        </div>
+    </div>
+    
+    <br>
+    <br>
+
+    <script src="pagina12_java.js"></script>
+
+</body>
+</html>

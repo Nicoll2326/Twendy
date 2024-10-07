@@ -1,0 +1,107 @@
+<!DOCTYPE html> <!--informa al navegador que version de html se usa-->
+<html lang="en"> <!--especifica el idioma natural del contenido de la pagina-->
+<head><!--apertura de encabezado-->
+    <meta charset="UTF-8"><!--incluye los caracteres para mostrar el contenido de texto correctamente-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--controla el ancho de la pagina-->
+    <link rel="stylesheet" href="pagina5.css"><!--es el enlace para unir el css al html-->
+    <title> pagina 5 </title><!--agrega titulo a la pagina-->
+</head><!--cierre de  encabeza-->
+<body><!--es el cuerpo del html-->
+    
+  <!-- Inicio del encabezado -->
+  <header> 
+
+    <h2 class="Twendy"> Twendy </h2> 
+     <input type="checkbox" id="check">
+     <label for="check" class="mostrar_menu">
+&#8801
+     </label>
+     <nav class="menu">
+          <a href="pagina6.html"> Informacion </a> 
+          <a href="pagina7.html"> Actualizar datos </a> 
+          <a href="pagina5.html"> Registro </a> 
+          <a href="pagina2.html"> Iniciar sesion </a> 
+     <label for="check" class="esconder_menu">
+&#215
+     </label>
+     </nav>
+
+</header>
+<!-- fin de el encabezado -->
+<br> <br> <br> 
+    <div class="container"> <!--define divisiones en el contenido-->
+<form class="formulario"><!--apertura de un formulario-->
+
+        <!--apertura  para una etiqueta de un elemento--> <br>
+        <b class="texto1"> NOMBRE(S)</b>
+            <label for= "nombre"><input class="espacio1"type="text" id= "nombre"> </input><!--permite cuadros de texto para el nombre--></label> 
+    
+  
+     <div>
+        <!--apertura  para una etiqueta de un elemento-->  <!--el for indica a que input hara referencia la etiqueta-->
+        <b class="texto2">APELLIDO(S)</b>
+        <label for= "apellido"><input class="espacio2" type="text" id= "apellido"></input><!--permite cuadros de textos para el apellido--></label> 
+   
+   </div>
+              
+   <div> <!--selector de desplieje de un formulario -->
+  <!--etiqueta elemento  -->  <!--titulo del selector desplegable-->
+           <select class="desplieje" id="documento">     <!--clase para agregar opciones al selector-->
+               <option  value="">Tipo de documento</option> <!--agrega opciones al selector-->
+               <option value="ti"> Tarjeta de identidad</option>
+               <option value="cc"> Cedula de ciudadania</option>
+               <option value="ce"> Cedula Extranjera</option>   <input class="espacio6"  type="number" id= "documento"></input><!--permite cuadros de texto --></label>
+           </select>
+   </div>
+   <div>
+    <!--apertura  para una etiqueta de un elemento-->
+    <b class="texto3">  FECHA DE NACIMIENTO </b>
+                 <label for= "f.Nacimiento"> <input type="date" id= "f. Nacimientos"></input><!--permite cuadros de texto del calendario--></label>
+   
+   </div> <br>
+   <div>
+    <!--apertura  para una etiqueta de un elemento-->
+    <b class="texto4">CORREO ELECTRONICO</b>
+                  <label for= "correo"> <input class = "espacio3" type="int" id= "correo"></input><!--permite cuadros de texto para el correo--></label>
+   
+   <div> <br>
+    <!--apertura  para una etiqueta de un elemento-->
+    <b class="texto5">CONTRASEÑA </b>
+
+           <label for= "Contrasena"> <input class = "espacio4" type="text" id= "contraseña"></input><!--permite cuadros de texto para la contraseña--></label> 
+   </div>
+   <div> <br>
+    <!--apertura  para una etiqueta de un elemento-->
+    <b class="texto6">VERIFICAR </b>
+
+    <label for= "verificar"><input class = "espacio5" type="int" id= "verificar"></input><!--permite cuadros de texto para verificar contraseña--></label>
+   
+   </div> <div> <br>
+   <!--apertura  para una etiqueta de un elemento-->
+
+
+       <select class="desplieje" id="documento">     <!--clase para agregar opciones al selector-->
+        <option  value="">TIPO DE USUARIO</option> <!--agrega opciones al selector-->
+        <option value="ti"> ADMINISTRADOR</option>
+        <option value="cc"> USUARIO EXTRA</option>
+    </select>
+
+               
+                
+            <br><!--crea un boton para enviar-->
+
+            <!-- inicio de el boton de cancelar la operacon-->
+<div class="contenedor">
+            <a href="#">
+               <br> <button class="boton1" type="reset"> <b>CANCELAR</button> 
+            </a>
+<br>
+              <a href="#">
+                <br> <button class="boton2" type="button"> <b>ACEPTAR</button> 
+              </a> 
+            </div>
+    
+    
+</form> <!--cierre de un formulario-->
+</body> <!--cierre del cuerpo del documento-->
+</html><!--cieere del documento html-->

@@ -1,0 +1,247 @@
+/*inicio de el encabezado*/
+* {
+    margin: 0; /* Margenes de la pagina web */
+    padding: 0; 
+    font-family: Arial, Helvetica, sans-serif; /*tipo de letra de toda la pagina*/
+}
+/*HEADER, la cabecera*/
+header{
+    height: 80px;
+    background-color: #4E4E4E; /*color de el encabezado*/
+    padding: 0 50px;
+    color: rgb(231, 214, 214);
+    display: flex; /* */
+    justify-content: space-between; /*para que queden centrados */
+    align-items: center; /* centrados dentro de el contenedor*/
+}
+
+/* Estilos del cuerpo */
+body {
+    background: #B1B2B1; /* Color de fondo del cuerpo */
+}
+
+/*la palabra twendy*/
+.Twendy{
+  text-transform: uppercase; /* para qeu todo el textpo quede en mayuscula*/
+  color: white; /*color de la palabra */
+  font-weight: 200px; /* grosor de la palabar */
+  font-size: 40px; /* tamaño de la letra */
+  text-decoration: none; /* quita el subrayado */
+}
+
+/*todas los links que estan en el encabezado*/
+.menu a{
+    color: #fff; /*color de las palabras de el encabezado*/
+    text-transform: uppercase; /* todo en mayusculas*/
+    text-decoration: none; /* quita el subrayado */
+    padding: 0 10px; /* */
+    /* transition: 0,4s; */
+}
+
+a{
+    font-weight: 700; /* grosor de las palabras de el encabezado */
+}
+
+/* botones de la x y de la hamburguesa*/
+
+.esconder_menu,
+.mostrar_menu{
+  font-size: 30px;/* tamaño de la letra */
+  cursor: pointer; /* para que se conviertan en un tipo boton*/
+  display: none; /* para que solo se vea en la version reponsive */
+  transition: 0,4s;  /* */
+}
+
+.mostrar_menu{
+    order: 1;
+}
+
+
+/*inicio de los efectos de color - produce un cambio al situar el ratón encima de un elemento. */
+.menu a:hover,
+.mostrar_menu:hover,
+.esconder_menu:hover{
+    color: black; 
+}
+
+#check{
+    display: none; /*el check ya no sale */
+}
+
+/*RESPONSIVE DEL ENCABEZADO*/
+@media(max-width: 852px){
+    /*HEADER*/
+.mostrar_menu,
+.esconder_menu{
+    display: block;
+}
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #4E4E4E;
+        left: o;
+        right: -100%;
+        top: 0;
+        text-align: center; /*texto alineado a el centro*/
+        padding: 100px 0px; /* de 100 a 0 */
+        z-index: 100;
+        transition: 1s; /* */
+    }
+
+    .menu a{
+        display: block; /* para que las opciones aparezcan uno encima de el otro */
+        padding: 20px; /*separa un poco las opciones*/
+    }
+
+    .esconder_menu{
+        position: absolute; /*permite modificar la posicion de la x */
+        top: 40px; /* modifica la posicion de la x hacia arriba*/
+        right: 65px; /* modifica la posicion de la x a la derecha */
+    }
+    
+    /*para que cuandpo cambie de dispositivo se active el menu de hamburguesa*/
+    #check:checked ~ .menu{
+        right: 0;
+    }
+    
+    } /*caundo el slector este checkeado, todos los elementos de este check seran visibles */
+
+
+/*fin de el encabezado*/
+/**/
+
+
+body{
+    font-family: arial;
+    align-items: center;
+}
+
+/*inicio de el cuadro grande que contiene toda la informacion*/
+.contenedor{
+    height:380px; /* alto de el cuadro*/
+    width:600px; /*ancho de el cuadro*/
+    max-width: 700px; /* Ancho máximo del cuadro */
+    background-color:#BCBEC0; /* Color de fondo */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 8px; /* Borde redondeado */
+    text-align: center; /* Alinear texto al centro */
+    margin:  auto; /* Margen superior e inferior automático, centrado horizontal */
+    width: calc(600px); /* Ancho del botón con margen a izquierda y derecha */
+
+}
+
+/*fin de el cuadro que contiene toda la informacion */
+
+/*inicio de la imagen de el candado*/
+.contenedor img {
+    height: 40px; /* alto de la imagen*/
+    width:50PX; /* ancho de la imagen*/
+    text-align: center; /* alineacion de la imagem*/
+    float:left; /*quitar al elemento del flujo normal de la página y colocarlo a la izquierda o derecha del resto del contenido de su elemento padre*/
+    border-radius: 20px; /*nos permite redondear los bordes de las cajas*/
+}
+/*fin de la clase de el candado*/
+
+/*inicio de la clase de el texto Nueva contraseña*/
+.alineacion1 {
+    margin-right: 26px; /*establece el margen derecho de un elemento especificando una longitud o un porcentaje*/
+    width: 200px; /* ancho de el contenido*/
+    height: 25px; /*alto de en contenido*/
+    border-radius: 5px;
+}
+
+/*fin de la clase de comfirmar la contraseña*/
+
+/*inicio de  texto confirmar contraseña*/
+.alineacion {
+    margin-right: 26px; /*establece el margen derecho de un elemento especificando una longitud o un porcentaje*/
+    width: 173px; /*ancho de el cuadro*/
+    height: 25px; /*alto de la imagen*/
+    border-radius: 5px;
+}
+/*fin de el cuadro de confirmar contraseña*/
+
+/*clase de el boton de cancelar*/
+.opcion1{
+    font-size: 16px; 
+    max-width: 100px; /* ancho de el cuadro*/
+    width: calc(100% - 60%); /* Ancho ajustado adicional para campos y botón en pantallas muy pequeñas */
+    padding: 10px; /* Reducir el espaciado interno en pantallas pequeñas */
+    justify-content: center; /* Centrar vertical y horizontalmente en pantallas pequeñas */
+    align-items: center;
+    margin-left:auto; /*esto es muy importante, ya que este es el que permite que la posicion de el elemento se centre y sew adapte*/
+    border-radius: 5px;
+}
+    /*fin de la clase de el boton de cancelar*/
+/*inicio de la clase de el boton de " siguiente"v*/
+    .opcion2{
+        font-size: 16px; 
+        max-width: 100px; /* ancho de el cuadro*/
+        width: calc(100% - 60%); /* Ancho ajustado adicional para campos y botón en pantallas muy pequeñas */
+        padding: 10px; /* Reducir el espaciado interno en pantallas pequeñas */
+        justify-content: center; /* Centrar vertical y horizontalmente en pantallas pequeñas */
+        align-items: center;
+        margin-left:auto; /*esto es muy importante, ya que este es el que permite que la posicion de el elemento se centre y sew adapte*/
+        border-radius: 5px;
+}
+/*fin de el boton de "siguiente */
+
+
+.opcion1:hover,
+.opcion2:hover{
+    background-color: rgb(84, 90, 90); /* Cambiar color de fondo al pasar el ratón */
+    transform: translate(0.3px);
+    margin-left:auto; /*esto es muy importante, ya que este es el que permite que la posicion de el elemento se centre y sew adapte*/
+}
+/*este es el mas importante, ya que permite que el cuadro mas grande se adapte a las pantallas*/
+.contenedor{
+    width: calc(100% - 40px); /* Reducir el ancho del cuadro en pantallas pequeñas */
+    padding: 10px; /* Reducir el espaciado interno en pantallas pequeñas */
+}
+
+/**/
+
+
+@media (max-width: 768px) {
+    .cuadro_grande {
+        width: calc(100% - 40px); /* Reducir el ancho del cuadro en pantallas pequeñas */
+        padding: 10px; /* Reducir el espaciado interno en pantallas pequeñas */
+    }
+
+    /* Estilos para .section en pantallas pequeñas */
+    .section {
+        width: calc(100% - 10PX); /* Reducir el ancho del campo en pantallas pequeñas */
+        max-width: none; /* Quitar el máximo ancho en pantallas pequeñas */
+        font-size: 16px; /* Reducir el tamaño de fuente en pantallas pequeñas */
+        padding: 16px; /* Reducir el espaciado interno en pantallas pequeñas */
+
+    }
+}
+
+/*este codigo ajusta el ancho de los cuadros a la hora de cambiar de dispositivo*/
+.numeroDocumento,
+.correoElectronico,
+.TipodeDocumento{
+    width: calc(100% - 10%); /* Ancho ajustado adicional para campos y botón en pantallas muy pequeñas */
+}
+
+.RestablecerContraseña{
+    font-size: 5px; 
+    max-width: 100px; /* ancho de el cuadro*/
+    width: calc(100% - 60%); /* Ancho ajustado adicional para campos y botón en pantallas muy pequeñas */
+    padding: 10px; /* Reducir el espaciado interno en pantallas pequeñas */
+    justify-content: center; /* Centrar vertical y horizontalmente en pantallas pequeñas */
+    align-items: center;
+    margin-left:auto; /*esto es muy importante, ya que este es el que permite que la posicion de el elemento se centre y sew adapte*/
+}
+
+.a{
+    justify-content: center; /* Centrar vertical y horizontalmente en pantallas pequeñas */
+    align-items: center;
+}
+
+
+/*seccion javascrip*/
+

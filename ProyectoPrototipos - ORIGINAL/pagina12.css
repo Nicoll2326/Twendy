@@ -1,0 +1,404 @@
+/*inicio de el encabezado*/
+* {
+  margin: 0; /* Margenes de la pagina web */
+  padding: 0; 
+  font-family: Arial, Helvetica, sans-serif; /*tipo de letra de toda la pagina*/
+}
+/*HEADER, la cabecera*/
+header{
+  height: 100px;
+  background-color: #4E4E4E; /*color de el encabezado*/
+  padding: 0 50px;
+  color: rgb(231, 214, 214);
+  display: flex; /* */
+  justify-content: space-between; /*para que queden centrados */
+  align-items: center; /* centrados dentro de el contenedor*/
+}
+body {
+  background: #B1B2B1; /* Color de fondo del cuerpo */
+}
+
+/*todas los links que estan en el encabezado*/
+.menu ul{
+  color: #fff; /*color de las palabras de el encabezado*/
+  text-transform: uppercase; /* todo en mayusculas*/
+  text-decoration: none; /* quita el subrayado */
+  padding: 0 10px; /* */
+  /* transition: 0,4s; */
+}
+
+a{
+  font-weight: 0.9rem; /* grosor de las palabras de el encabezado */
+}
+
+
+nav {
+  background-color: #4E4E4E; /* establece el color de fondo de la barra de navegación en un gris oscuro */
+  padding-left: 5%; /* agrega relleno a la izquierda de la barra de navegación */
+  width: 100%; /* establece el ancho de la barra de navegación en 100% del elemento padre */
+  height: 5rem; /* establece la altura de la barra de navegación en 5rem */
+  display: flex; /* muestra la barra de navegación como un contenedor flexible */
+}
+
+.lupa {
+  color: black; /* establece el color de texto del elemento con clase "lupa" en negro */
+  position: relative; /* establece la posición del elemento en relativa */
+  right: 230px; /* mueve el elemento 230px a la derecha */
+  top: 2px; /* mueve el elemento 2px hacia abajo */
+  font-size: 1.1rem; /* establece el tamaño de fuente del elemento en 1.1rem */
+}
+
+.cerrar {
+  color: black; /* establece el color de texto del elemento con clase "cerrar" en negro */
+  position: relative; /* establece la posición del elemento en relativa */
+  right: 45px; /* mueve el elemento 45px a la derecha */
+  top: 2px; /* mueve el elemento 2px hacia abajo */
+  font-size: 25px; /* establece el tamaño de fuente del elemento en 25px */
+}
+
+nav ul {
+  float: left; /* flota la lista desordenada a la izquierda */
+  display: flex; /* muestra la lista desordenada como un contenedor flexible */
+  font-size: 1.1rem; /* establece el tamaño de fuente de la lista desordenada en 1.1rem */
+}
+
+nav ul li {
+  float: left; /* flota el elemento de lista a la izquierda */
+  list-style: none; /* elimina los puntos de lista del elemento de lista */
+  position: relative; /* establece la posición del elemento de lista en relativa */
+}
+
+nav ul li a {
+display: block; /* muestra el elemento de enlace como un bloque */
+padding: 0rem 1.5rem; /* agrega relleno al elemento de enlace */
+line-height: 5rem; /* establece la altura de línea del elemento de enlace en 5rem */
+color: #ffffff; /* establece el color de texto del elemento de enlace en blanco */
+text-decoration: none; /* elimina la decoración de texto del elemento de enlace */
+}
+
+nav ul li ul {
+  display: none; /* oculta la lista desordenada anidada por defecto */
+  position: absolute; /* establece la posición de la lista desordenada anidada en absoluta */
+  border: 1px solid #000000; /* agrega un borde de 1px sólido negro a la lista desordenada anidada */
+  background-color: #4E4E4E; /* establece el color de fondo de la lista desordenada anidada en un gris oscuro */
+}
+
+nav ul li:hover ul {
+  display: block; /* muestra la lista desordenada anidada cuando se pasa el mouse sobre el elemento de lista padre */
+}
+
+nav ul li ul li {
+  width: 100%; /* establece el ancho del elemento de lista anidado en 100% del elemento padre */
+}
+
+nav ul li ul li a {
+  padding: 1rem 2rem; /* agrega relleno al elemento de enlace anidado */
+  line-height: unset; /* restablece la altura de línea del elemento de enlace anidado */
+  white-space: nowrap; /* evita que el elemento de enlace anidado se desborde a una nueva línea */
+}
+
+nav ul li ul li a:hover {
+  background-color: #383838; /* establece el color de fondo de la barra de navegacion cuando el curso esta encima de ella */
+}
+
+.exit {
+  color: white; /* establece el color de texto del elemento con clase "exit" en blanco */
+  font-size: 2rem; /* establece el tamaño de fuente del elemento en 2rem */
+  position: absolute; /* establece la posición del elemento en absoluta */
+  cursor: pointer; /* establece el cursor en un puntero */
+  top: 29px; /* mueve el elemento 29px hacia abajo */
+  left: 1250px; /* mueve el elemento 1250px a la derecha */
+}
+
+.exit:hover {
+  color: black; /* establece el color de texto del elemento en negro cuando se pasa el mouse sobre él */
+}
+
+.clase_filtro {
+display: block; /* muestra el elemento como un bloque */
+margin-right: 55px; /* agrega un margen a la derecha del elemento de 55px */
+height: 35px; /* establece la altura del elemento en 35px */
+width: 65px; /* establece el ancho del elemento en 65px */
+text-align: center; /* centra el texto horizontalmente */
+border-radius: 10px; /* agrega un radio de curvatura de 10px a los bordes del elemento */
+background-color: white; /* establece el color de fondo del elemento en blanco */
+}
+
+.buscador {
+padding-left: 35px; /* agrega un relleno a la izquierda del elemento de 35px */
+height: 27px; /* establece la altura del elemento en 27px */
+width: 320px; /* establece el ancho del elemento en 320px */
+border-radius: 10px; /* agrega un radio de curvatura de 10px a los bordes del elemento */
+padding-right: -90%; /* establece el relleno a la derecha del elemento en -90% (no recomendado, puede causar problemas de diseño) */
+}
+
+.tabla-negra {
+width: 2010px; /* Establece el ancho de la tabla*/
+border-collapse: collapse; /* colapsa los bordes de la tabla*/
+table-layout: fixed; /* Establece el diseño de la tabla a fijo*/
+align-content: center; /* alinea el contenido al centro*/
+}
+
+th, td {
+border: 2px solid black; /* establece el tamaño del borde y su color*/
+padding-top: 15px; /* Relleno de la parte superior*/
+padding-bottom: 15px; /* Relleno de la parte inferior*/
+padding-right: -30px; /* Relleno de la derecha */
+padding-left: -30px;
+text-align: center; /* Alineacion de texto al centro*/
+}
+
+.eliminar_celda:hover{
+cursor: pointer; /* Esto indica al usuario que el elemento es clickable.*/
+background-color: #B1B2B1; /* Este estilo cambia el color de fondo del elemento a un gris claro (#B1B2B1) cuando el usuario pasa el mouse sobre el elemento. */
+}
+
+.container {
+display: flex; /* muestra el contenedor como flexible*/
+justify-content: space-between; /* distribuye los elementos de manera uniforme*/
+}
+
+.botones{
+cursor: pointer; /* Esto indica al usuario que el elemento es clickable.*/
+border-radius: 10px; /* Este estilo agrega un radio de curvatura de 10 píxeles a los bordes del elemento. */
+height: 25px; /* Esta propiedad establece la altura del elemento en 25 píxeles.*/
+width: 39px; /* Esta propiedad establece la anchura del elemento en 39 píxeles.*/
+font-size: 22px; /* Esta propiedad establece el tamaño de la fuente del texto dentro del elemento en 22 píxeles.*/
+}
+
+.center-container {
+text-align: left; /* Alineacion de texto a la izquierda*/
+margin: 20px; /* Margenes de 20px*/
+}
+
+.imagen{
+display: flex; /* Muestra el contenedor como flexible */
+text-align: end; /* Alineacion de texto al final*/
+height: 160px; /* Altura de la clase*/
+width: 200px; /* Anchura de la clase*/
+}
+
+img {
+float: left; /* coloca la clase al lado izquierdo del contenedor*/
+}
+
+input {
+width: 80px; /* Anchura de la clase input*/
+}
+
+/* botones de la x y de la hamburguesa*/
+
+.esconder_menu,
+.mostrar_menu{
+font-size: 30px;/* tamaño de la letra */
+cursor: pointer; /* para que se conviertan en un tipo boton*/
+display: none; /* para que solo se vea en la version reponsive */
+transition: 0,4s;  /* */
+}
+
+.mostrar_menu{
+  order: 1;
+}
+
+
+/*inicio de los efectos de color - produce un cambio al situar el ratón encima de un elemento. */
+.menu ul:hover,
+.mostrar_menu:hover,
+.esconder_menu:hover{
+  color: black; 
+}
+
+#check{
+  display: none; /*el check ya no sale */
+}
+
+/*RESPONSIVE DEL ENCABEZADO*/
+@media(max-width: 1067px){
+  /*HEADER*/
+.mostrar_menu,
+.esconder_menu{
+  display: block;
+}
+
+  .menu{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background-color: #4E4E4E;
+      left: o;
+      right: -100%;
+      top: 0;
+      text-align: center; /*texto alineado a el centro*/
+      padding: 100px 0px; /* de 100 a 0 */
+      z-index: 100;
+      transition: 1s; /* */
+  }
+
+  .menu ul{
+      display: block; /* para que las opciones aparezcan uno encima de el otro */
+      padding: 20px; /*separa un poco las opciones*/
+  }
+
+  .esconder_menu{
+      position: absolute; /*permite modificar la posicion de la x */
+      top: 40px; /* modifica la posicion de la x hacia arriba*/
+      right: 65px; /* modifica la posicion de la x a la derecha */
+  }
+  
+  /*para que cuandpo cambie de dispositivo se active el menu de hamburguesa*/
+  #check:checked ~ .menu{
+      right: 0;
+  }
+  
+  } /*caundo el slector este checkeado, todos los elementos de este check seran visibles */
+
+
+/*fin de el encabezado*/
+
+@media(max-width: 1260px){
+
+}
+
+@media(max-width: 1025px){
+input {
+  width: 80px; /* Anchura de la clase input*/
+}
+}
+
+@media(max-width: 769px){
+input {
+  width: 62px; /* Anchura de la clase input*/
+}
+
+.tabla-negra{
+  display: block; /* Muestra el contenedor como bloque */
+  border-collapse: collapse; /* colapsa los bordes de la tabla*/
+  table-layout: fixed; /* Los anchos de tabla y columna se establecen por los anchos de tabla y columna o por el ancho de la primera fila de celdas */
+  align-content: center; /*alineacion de contenido en el centro*/
+  width: 190px; /* anchura de la clase */
+  height: 100px;  /* altura de la clase */
+  right: -100%;  /* anchura de la clase en la parte derecha*/
+}
+}
+
+
+@media(max-width: 425px){ /* Reponsive para telefonos de 415px */
+input {
+  width: 42px; /* Anchura de la clase input*/
+}
+
+th, td {
+  border: 1px solid black; /* establece el tamaño del borde y su color*/
+  padding-top: 9px; /* Relleno de la parte superior*/
+  padding-bottom: 9px; /* Relleno de la parte inferior*/
+  padding-right: -15px; /* Relleno de la derecha */
+  padding-left: -15px; /* Relleno de la izquierda */
+  text-align: center; /* Alineacion de texto al centro*/
+  height: 40px; /* altura de la clase */
+  width: 70px; /* anchura de la clase */
+  font-size: 12.9px; /* tamaño de la letra */
+  font-weight: 3px;  /* grosor de la letra */
+}
+
+.reportes{
+  display:block; /* Muestra el contenedor como bloque */
+  margin-top: 370px; /* Margenes de la clase en la parte superior*/
+  margin-right: 100px; /* Margenes de la clase en la derecha*/
+  margin-left: -65px; /* Margenes de la clase en la izquierda*/
+}
+
+.botones{
+  padding: 5px; /* relleno de la clase */
+}
+}
+
+
+@media(max-width: 415px){ /* Reponsive para telefonos de 415px */
+input {
+  width: 37px; /* Anchura de la clase input*/
+}
+
+th, td {
+  border: 1px solid black; /* establece el tamaño del borde y su color*/
+  padding-top: 9px; /* Relleno de la parte superior*/
+  padding-bottom: 9px; /* Relleno de la parte inferior*/
+  padding-right: -15px; /* Relleno de la derecha */
+  padding-left: -15px; /* Relleno de la izquierda */
+  text-align: center; /* Alineacion de texto al centro*/
+  height: 40px; /* altura de la clase */
+  width: 70px; /* anchura de la clase */
+  font-size: 12.9px; /* tamaño de la letra */
+  font-weight: 3px; /* grosor de la letra */
+}
+
+.reportes{
+  display:block; /* Muestra el contenedor como bloque */
+  margin-top: 370px; /* Margenes de la clase en la parte superior*/
+  margin-right: 120px; /* Margenes de la clase en la derecha*/
+  margin-left: -35px; /* Margenes de la clase en la izquierda*/
+}
+
+.botones{
+  padding: 5px; /* relleno de la clase */
+}
+}
+
+
+@media(max-width: 375px){ /* Reponsive para telefonos de 375px */
+input {
+  width: 41.5px; /* Anchura de la clase input*/
+}
+
+th, td {
+  border: 1px solid black; /* establece el tamaño del borde y su color*/
+  padding-top: 9px; /* Relleno de la parte superior*/
+  padding-bottom: 9px; /* Relleno de la parte inferior*/
+  padding-right: -15px; /* Relleno de la derecha */
+  padding-left: -15px; /* Relleno de la izquierda */
+  text-align: center; /* Alineacion de texto al centro*/
+  height: 40px; /* altura de la clase */
+  width: 70px; /* anchura de la clase */
+  font-size: 9.5px; /* tamaño de la letra */
+}
+
+.reportes{
+  display:block; /* Muestra el contenedor como bloque */
+  margin-top: 370px; /* Margenes de la clase en la parte superior*/
+  margin-right: 120px; /* Margenes de la clase en la derecha*/
+  margin-left: -90px; /* Margenes de la clase en la izquierda*/
+}
+
+.botones{
+  padding: 5px; /* relleno de la clase */
+}
+}
+
+
+@media(max-width: 322px){ /* Reponsive para telefonos de 320px */
+input {
+  width: 34.5px; /* Anchura de la clase input*/
+}
+
+th, td {
+  border: 1px solid black; /* establece el tamaño del borde y su color*/
+  padding-top: 9px; /* Relleno de la parte superior*/
+  padding-bottom: 9px; /* Relleno de la parte inferior*/
+  padding-right: -15px; /* Relleno de la derecha */
+  padding-left: -15px; /* Relleno de la izquierda */
+  text-align: center; /* Alineacion de texto al centro*/
+  height: 40px; /* altura de la clase */
+  width: 70px; /* anchura de la clase */
+  font-size: 8.1px; /* tamaño de la letra */
+}
+
+.reportes{
+  display:block; /* Muestra el contenedor como bloque */
+  margin-top: 370px; /* Margenes de la clase en la parte superior*/
+  margin-right: 140px; /* Margenes de la clase en la derecha*/
+  margin-left: -120px; /* Margenes de la clase en la izquierda*/
+}
+
+.botones{
+  padding: 5px; /* relleno de la clase */
+}
+}

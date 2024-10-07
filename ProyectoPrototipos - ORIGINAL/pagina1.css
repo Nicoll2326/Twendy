@@ -1,0 +1,174 @@
+/* Estilos generales para toda la página */
+/*inicio de el encabezado*/
+* {
+    margin: 0; /* Establece márgenes en cero para todos los elementos */
+    padding: 0; /* Establece relleno en cero para todos los elementos */
+    font-family: Arial, Helvetica, sans-serif; /* Define la fuente para toda la página */
+}
+
+/* Estilos del encabezado */
+/*HEADER, la cabecera*/
+header {
+    height: 80px; /* Altura del encabezado */
+    background-color: #4E4E4E; /* Color de fondo del encabezado */
+    padding: 0 50px; /* Relleno interno del encabezado */
+    color: rgb(231, 214, 214); /* Color del texto del encabezado */
+    display: flex; /* Utiliza flexbox para el diseño */
+    justify-content: space-between; /* Distribuye los elementos equitativamente */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+}
+
+/* Estilos del cuerpo */
+body {
+    background: #B1B2B1; /* Color de fondo del cuerpo */
+
+}
+
+/* Estilos para el texto "Twendy" */
+
+/*la palabra twendy*/
+.Twendy {
+    text-transform: uppercase; /* Transforma todo el texto a mayúsculas */
+    color: white; /* Color del texto */
+    font-weight: 200px; /* Grosor de la fuente (incorrecto, debería ser solo "font-weight: 200;") */
+    font-size: 40px; /* Tamaño de la fuente */
+    text-decoration: none; /* Quita el subrayado (no es relevante para elementos que no son enlaces) */
+}
+
+/* Estilos para todos los enlaces dentro del menú */
+/*todas los links que estan en el encabezado*/
+.menu a {
+    color: #fff; /* Color del texto de los enlaces en el encabezado */
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    text-decoration: none; /* Quita el subrayado */
+    padding: 0 10px; /* Espacio interno de los enlaces (arriba y abajo 0, izquierda y derecha 10px) */
+    transition: 0,4s; /* Transición de 0.4 segundos para efectos de cambio */
+}
+
+a {
+    font-weight: 700; /* Grosor de la fuente para todos los enlaces (sobrescribe el valor anterior solo para los enlaces) */
+}
+
+  /* botones de la x y de la hamburguesa*/
+  
+  .esconder_menu,
+  .mostrar_menu{
+  font-size: 30px;/* tamaño de la letra */
+  cursor: pointer; /* para que se conviertan en un tipo boton*/
+  display: none; /* para que solo se vea en la version reponsive */
+  transition: 0,4s;  /* */
+  }
+  
+
+/* Cambia el orden del elemento con la clase mostrar_menu */
+.mostrar_menu {
+    order: 1; /* Define el orden del elemento en el diseño flexbox */
+}
+
+/* Cambia el color del texto a negro al pasar el ratón sobre enlaces del menú, el icono mostrar_menu y el icono esconder_menu */
+.menu a:hover, /* Cambia el color del texto al pasar el ratón sobre los enlaces del menú */
+.mostrar_menu:hover, /* Cambia el color del texto al pasar el ratón sobre el icono de mostrar menú */
+.esconder_menu:hover { /* Cambia el color del texto al pasar el ratón sobre el icono de esconder menú */
+    color: black; /* Color del texto al pasar el ratón */
+}
+
+/* Oculta el elemento con el id check */
+#check {
+    display: none; /* Oculta el elemento */
+}
+  /*RESPONSIVE DEL ENCABEZADO*/
+@media(max-width: 852px){
+    /*HEADER*/
+    .mostrar_menu,
+    .esconder_menu{
+        display: block; /* Hace visible los elementos con clase mostrar_menu y esconder_menu */
+    }
+  
+    .menu{
+        position: fixed; /* Posiciona el elemento de menú fijo en la ventana */
+        width: 100%; /* Ancho completo del viewport */
+        height: 100vh; /* Altura completa del viewport */
+        background-color: #4E4E4E; /* Color de fondo del menú */
+        left: o; /* Error tipográfico: debería ser '0' para posición desde la izquierda */
+        right: -100%; /* Inicialmente fuera del viewport a la derecha */
+        top: 0; /* Alineado al tope de la ventana */
+        text-align: center; /* Texto alineado al centro */
+        padding: 100px 0px; /* Relleno superior e inferior de 100px y ninguno en los lados */
+        z-index: 100; /* Orden de apilamiento del menú sobre otros elementos */
+        transition: 1s; /* Transición animada de 1 segundo */
+    }
+  
+    .menu a{
+        display: block; /* Hace que los elementos de enlace se muestren como bloques */
+        padding: 20px; /* Relleno interior de 20px para los enlaces */
+    }
+  
+    .esconder_menu{
+        position: absolute; /* Posicionamiento absoluto respecto al primer ancestro posicionado */
+        top: 40px; /* Distancia de 40px desde la parte superior */
+        right: 65px; /* Distancia de 65px desde la derecha */
+    }
+    
+    /* Para activar el menú hamburguesa cuando se marque el check */
+    #check:checked ~ .menu{
+        right: 0; /* Muestra el menú desplazándolo hacia la izquierda */
+    }
+    
+} /* Final del bloque de media query para pantallas de ancho máximo de 852px */
+
+/* Fin del encabezado */
+
+/* Estilos del contenido */
+
+section {
+    text-align: center; /* Alinea el texto al centro dentro de la sección */
+    padding: 20px; /* Espaciado interior de 20px para la sección */
+}
+
+section .Titulo {
+    font-size: 58px; /* Tamaño de fuente grande para el título */
+    margin-bottom: 20px; /* Margen inferior de 20px para separar el título de otros elementos */
+}
+
+section .blanco {
+    background-color: #f2f2f2; /* Color de fondo gris claro */
+    padding: 20px; /* Espaciado interior de 20px */
+    border-radius: 16px; /* Borde redondeado con radio de 16px */
+    box-shadow: 0 0 10px rgba(224, 214, 214, 0.1); /* Sombra ligera alrededor del elemento */
+    max-width: 600px; /* Ancho máximo del elemento */
+    margin: 0 auto; /* Centra el elemento horizontalmente, al centro */
+}
+
+section .cuadro {
+    background-color: white; /* Color de fondo blanco */
+    padding: 50px; /* Espaciado interior grande de 50px */
+    border-radius: 12px; /* Borde redondeado con radio de 12px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera alrededor del elemento */
+    max-width: 600px; /* Ancho máximo del elemento */
+    margin: 0 auto; /* Centra el elemento horizontalmente, al centro */
+    font-size: 28px; /* Tamaño de fuente grande para el contenido */
+}
+
+/* Media queries adicionales para adaptación a cualquier dispositivo */
+
+@media (max-width: 480px) {
+    section .Titulo {
+        font-size: 24px; /* Tamaño de fuente reducido para pantallas más pequeñas */
+    }
+
+    section .cuadro {
+        padding: 15px; /* Espaciado interior reducido para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 320px) {
+    section .Titulo {
+        font-size: 20px; /* Tamaño de fuente aún más reducido para pantallas muy pequeñas */
+    }
+
+    section .cuadro {
+        padding: 10px; /* Espaciado interior mínimo para pantallas muy pequeñas */
+    }
+}
+
+

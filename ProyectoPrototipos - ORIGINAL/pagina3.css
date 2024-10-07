@@ -1,0 +1,242 @@
+/*inicio de el encabezado*/
+* {
+    margin: 0; /* Margenes de la pagina web */
+    padding: 0; 
+    font-family: Arial, Helvetica, sans-serif; /*tipo de letra de toda la pagina*/
+    font-size: 20px;
+}
+/*HEADER, la cabecera*/
+header{
+    height: 80px;
+    background-color: #4E4E4E; /*color de el encabezado*/
+    padding: 0 50px;
+    color: rgb(231, 214, 214);
+    display: flex; /* */
+    justify-content: space-between; /*para que queden centrados */
+    align-items: center; /* centrados dentro de el contenedor*/
+}
+
+/*la palabra twendy*/
+.Twendy{
+  text-transform: uppercase; /* para qeu todo el textpo quede en mayuscula*/
+  color: white; /*color de la palabra */
+  font-weight: 200px; /* grosor de la palabar */
+  font-size: 40px; /* tamaño de la letra */
+  text-decoration: none; /* quita el subrayado */
+}
+
+/*todas los links que estan en el encabezado*/
+.menu a{
+    color: #fff; /*color de las palabras de el encabezado*/
+    text-transform: uppercase; /* todo en mayusculas*/
+    text-decoration: none; /* quita el subrayado */
+    padding: 0 10px; /* */
+    /* transition: 0,4s; */
+}
+
+a{
+    font-weight: 700; /* grosor de las palabras de el encabezado */
+}
+
+/* botones de la x y de la hamburguesa*/
+
+.esconder_menu,
+.mostrar_menu{
+  font-size: 30px;/* tamaño de la letra */
+  cursor: pointer; /* para que se conviertan en un tipo boton*/
+  display: none; /* para que solo se vea en la version reponsive */
+  transition: 0,4s;  /* */
+}
+
+.mostrar_menu{
+    order: 1;
+}
+
+
+/*inicio de los efectos de color - produce un cambio al situar el ratón encima de un elemento. */
+.menu a:hover,
+.mostrar_menu:hover,
+.esconder_menu:hover{
+    color: black; 
+}
+
+#check{
+    display: none; /*el check ya no sale */
+}
+
+/*RESPONSIVE DEL ENCABEZADO*/
+@media(max-width: 852px){
+    /*HEADER*/
+.mostrar_menu,
+.esconder_menu{
+    display: block;
+}
+
+    .menu{
+        position: fixed; /* Posiciona el elemento de menú fijo en la ventana */
+        width: 100%; /* Ancho completo del viewport */
+        height: 100vh; /* Altura completa del viewport */
+        background-color: #4E4E4E; /* Color de fondo del menú */
+        left: o; /* Error tipográfico: debería ser '0' para posición desde la izquierda */
+        right: -100%; /* Inicialmente fuera del viewport a la derecha */
+        top: 0; /* Alineado al tope de la ventana */
+        text-align: center; /* Texto alineado al centro */
+        padding: 100px 0px; /* Relleno superior e inferior de 100px y ninguno en los lados */
+        z-index: 100; /* Orden de apilamiento del menú sobre otros elementos */
+        transition: 1s; /* Transición animada de 1 segundo */
+    }
+
+    .menu a{
+        display: block; /* para que las opciones aparezcan uno encima de el otro */
+        padding: 20px; /*separa un poco las opciones*/
+    }
+
+    .esconder_menu{
+        position: absolute; /*permite modificar la posicion de la x */
+        top: 40px; /* modifica la posicion de la x hacia arriba*/
+        right: 65px; /* modifica la posicion de la x a la derecha */
+    }
+    
+    /*para que cuandpo cambie de dispositivo se active el menu de hamburguesa*/
+    #check:checked ~ .menu{
+        right: 0;
+    }
+    
+    } /*caundo el slector este checkeado, todos los elementos de este check seran visibles */
+
+    /*color de el cuerpo*/
+
+body{
+    background: #B1B2B1;
+}
+
+
+/*fin de el encabezado*/
+
+
+/* aca empieza el cuadro de ingresar los datos - cuadro grande*/
+.cuadro_grande{
+    width: 600px; /* ancho de el cuadro*/
+    height: 380px; /* alto de el cuadro */ 
+    max-width: 600px; /* Ancho máximo del cuadro */
+    margin: 40px auto; /* Margen superior e inferior automático, centrado horizontal */
+    background-color:#BCBEC0; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Borde redondeado */
+    text-align: center; /* Alinear texto al centro */
+    align-items: center;
+    
+}
+/*fin de el cuadro grande*/
+
+/*inicio de el texto1 "TIPO DE DOCUMENTO" */
+/*texto "Tipo de Documento*/
+.texto1{
+ font-size: 30px; /*tamaño de la letra */
+}
+
+/*cuadro de el TIPO DE DOCUMENTO*/
+.TipodeDocumento{
+    width: 600px; /*ancho de el cuadro*/
+    height: 40px; /*alto de el cuadro*/
+    background-color: #fcf7f7; /*color de el fondo de el cuadro desplegable */
+    border-radius: 5px; /*Redondeo de los bordes de los cuadros*/
+    text-align: center; /*Alineacion del texto al centro*/
+}
+
+/*inicio de el texto "NUMERO DE DOCUMENTO*/
+
+.texto2{
+    font-size: 30px; /*tamaño de la letra */
+}
+    
+  /*inicio del cuadro de el  Numero de el cuadro de numero de Documento*/
+.numeroDocumento{
+    width: 400px; /* ancho de el cuadro*/
+    height: 35px; /* alto de el cuador*/
+    bottom:280px; /* modifica la posicion haceia abajo*/
+    right:60px; /* modifica la posicion hacia la derecha*/
+    border-radius: 5px ; /*Redondeo de los bordes de los cuadros */
+    text-align: center; /* Texto alineado al centro*/
+
+}
+/*inicio de el texto 3 "CORREO ELECTRONICO" */
+.texto3{
+    font-size: 20px ; /*tamaño de la letra */
+}
+
+/*inicio de la clase de el cuadro para ingresar el correo electronico*/
+.correoElectronico{
+    width: 400px; /* ancho de el cuadro*/
+    height: 36px; /*alto de el cuador*/
+    bottom: 200px; /* modifica la posicion haceia abajo*/
+    right:60px; /*modifica la posicion hacia la derecha*/
+    text-align: center; /* texto alinado al centro*/
+    border-radius: 5px; /*redondea los bordes de los cuadros*/
+}
+/* fin de la clase paqra ingresar el correo electronico*/
+a {
+    text-decoration: none; /* Quitar subrayado de los enlaces */
+    color: inherit; /* para quitar el color de la letra de el link */
+    font-size: 15px;
+    align-items: center;
+}
+/*inicio de la clase para el boton de Restablecer la Contraseña*/
+
+.RestablecerContraseña{
+    width: calc(100px); /* Ancho del botón con margen a izquierda y derecha */
+    max-width: 150px; /* ancho de el cuadro*/
+    height: 22px; /*alto de el cuadro*/
+    background-color: #8F8E8E; /* color de el cuadro*/
+    margin-bottom: 140px; /* modi14ica la posicion haceia abajo*/
+    border-radius: 4px; /* redondea los bordes de el cuadro*/
+    text-align: center; /* alineacion de texto: centrado */
+    margin: auto; /* auto' para centrar horizontalmente */
+    margin-left: 220px; /* Mover el elemento 50px hacia la izquierda */
+    transition: 0.3px; /* Transición de animación de 0.3 segundos */
+    color: rgb(7, 7, 7);
+}
+
+
+.RestablecerContraseña:hover{
+    background-color: rgb(84, 90, 90); /* Cambiar color de fondo al pasar el ratón */
+    transform: translate(1px);
+}
+
+@media (max-width: 768px) {
+    .cuadro_grande {
+        width: calc(100% - 40px); /* Reducir el ancho del cuadro en pantallas pequeñas */
+        padding: 10px; /* Reducir el espaciado interno en pantallas pequeñas */
+    }
+
+    /* Estilos para .section en pantallas pequeñas */
+    .section {
+        width: calc(100% - 10PX); /* Reducir el ancho del campo en pantallas pequeñas */
+        max-width: none; /* Quitar el máximo ancho en pantallas pequeñas */
+        font-size: 16px; /* Reducir el tamaño de fuente en pantallas pequeñas */
+        padding: 16px; /* Reducir el espaciado interno en pantallas pequeñas */
+
+    }
+}
+
+/*este codigo ajusta el ancho de los cuadros a la hora de cambiar de dispositivo*/
+.numeroDocumento,
+.correoElectronico,
+.TipodeDocumento{
+    width: calc(100% - 10%); /* Ancho ajustado adicional para campos y botón en pantallas muy pequeñas */
+}
+
+.RestablecerContraseña{
+    font-size: 5px; 
+    max-width: 100px; /* ancho de el cuadro*/
+    width: calc(100% - 60%); /* Ancho ajustado adicional para campos y botón en pantallas muy pequeñas */
+    padding: 10px; /* Reducir el espaciado interno en pantallas pequeñas */
+    justify-content: center; /* Centrar vertical y horizontalmente en pantallas pequeñas */
+    align-items: center;
+    margin-left:auto; /*esto es muy importante, ya que este es el que permite que la posicion de el elemento se centre y sew adapte*/
+}
+
+.a{
+    justify-content: center; /* Centrar vertical y horizontalmente en pantallas pequeñas */
+    align-items: center;
+}

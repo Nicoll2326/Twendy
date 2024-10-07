@@ -1,0 +1,239 @@
+/*inicio de el encabezado*/
+* {
+  margin: 0; /* Margenes de la pagina web */
+  padding: 0; 
+  font-family: Arial, Helvetica, sans-serif; /*tipo de letra de toda la pagina*/
+}
+/*HEADER, la cabecera*/
+header{
+  height: 100px;
+  background-color: #4E4E4E; /*color de el encabezado*/
+  padding: 0 50px;
+  color: rgb(231, 214, 214);
+  display: flex; /* */
+  justify-content: space-between; /*para que queden centrados */
+  align-items: center; /* centrados dentro de el contenedor*/
+}
+
+/* Estilos del cuerpo */
+body {
+  background: #B1B2B1; /* Color de fondo del cuerpo */
+}
+
+/*la palabra twendy*/
+.Twendy{
+text-transform: uppercase; /* para qeu todo el textpo quede en mayuscula*/
+color: white; /*color de la palabra */
+font-weight: 200px; /* grosor de la palabar */
+font-size: 40px; /* tamaño de la letra */
+text-decoration: none; /* quita el subrayado */
+}
+
+/*todas los links que estan en el encabezado*/
+.menu a{
+  color: #fff; /*color de las palabras de el encabezado*/
+  text-transform: uppercase; /* todo en mayusculas*/
+  text-decoration: none; /* quita el subrayado */
+  padding: 0 10px; /* */
+  /* transition: 0,4s; */
+}
+
+a{
+  font-weight: 700; /* grosor de las palabras de el encabezado */
+}
+
+/* botones de la x y de la hamburguesa*/
+
+.esconder_menu,
+.mostrar_menu{
+font-size: 30px;/* tamaño de la letra */
+cursor: pointer; /* para que se conviertan en un tipo boton*/
+display: none; /* para que solo se vea en la version reponsive */
+transition: 0,4s;  /* */
+}
+
+.mostrar_menu{
+  order: 1;
+}
+
+
+/*inicio de los efectos de color - produce un cambio al situar el ratón encima de un elemento. */
+.menu a:hover,
+.mostrar_menu:hover,
+.esconder_menu:hover{
+  color: black; 
+}
+
+#check{
+  display: none; /*el check ya no sale */
+}
+
+/*RESPONSIVE DEL ENCABEZADO*/
+@media(max-width: 852px){
+  /*HEADER*/
+.mostrar_menu,
+.esconder_menu{
+  display: block;
+}
+
+  .menu{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background-color: #4E4E4E;
+      left: o;
+      right: -100%;
+      top: 0;
+      text-align: center; /*texto alineado a el centro*/
+      padding: 100px 0px; /* de 100 a 0 */
+      z-index: 100;
+      transition: 1s; /* */
+  }
+
+  .menu a{
+      display: block; /* para que las opciones aparezcan uno encima de el otro */
+      padding: 20px; /*separa un poco las opciones*/
+  }
+
+  .esconder_menu{
+      position: absolute; /*permite modificar la posicion de la x */
+      top: 40px; /* modifica la posicion de la x hacia arriba*/
+      right: 65px; /* modifica la posicion de la x a la derecha */
+  }
+  
+  /*para que cuandpo cambie de dispositivo se active el menu de hamburguesa*/
+  #check:checked ~ .menu{
+      right: 0;
+  }
+  
+  } /*caundo el slector este checkeado, todos los elementos de este check seran visibles */
+
+
+/*fin de el encabezado*/
+
+  /*inicio de el cuadro grande en el que se contiene todo el contenido*/
+  .CuadroGrande{
+    align-items:first baseline;
+    background-color: rgb(218, 213, 212);
+    height: 420px;
+    width: 300px auto;
+    max-width: 900px; /* Ancho máximo del formulario */
+    background-color: #BCBEC0;
+    padding: 40px auto;
+    position: relative;
+    margin-top: 5%;
+    margin-left: 20%;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 22px;
+    min-width: none;
+  }
+  /*fin de la clase de el cuadro grande que contiene todo*/
+
+  /* inicio de la clase de el cuadro que dice "USUARIO"*/
+  .div2{
+  width: 260px; /*ancho de el cuadro*/
+  height: 80px; /*alto de el cuadro*/
+  background-color:#ECECEC; /*color de el fondo*/
+  border: 3px solid rgb(15, 14, 14); /*color de los bordes de el cuadro y cantidad de pixeles*/
+  margin-left: 50% auto; /*establece el margen izquierdo de un elemento especificando una longitud o un porcentaje*/
+  align-items: center; /*controla la alineación de todos los elementos en el eje transversal.*/
+  position:absolute; /*posicion */
+  bottom:70%; /*modifica la posicion hacia abajo*/
+  left: 30%;
+  font-family: arial; /* tipo de letra */
+  text-align: center; /*texto alineado a el centro*/
+  border-radius: 12px;
+  align-items: center;
+  padding: auto;
+  margin: auto;
+  }
+
+  /*fin de el cuadro de usuario, que es donde va la informacion de el usuario*/
+
+  /*inicio de la imagen de el icono negro*/
+  .Imagen{
+  position: absolute; /*posicion*/
+  left:30%; /*modifica la posicion hacia la izquierda*/
+  top: 40%; /*modifica la posicion hacia arriba*/
+  width: 150px; /* ancho de la imagen*/
+  height: 160px; /*alto de la imagen*/
+  margin-left: auto;
+  } 
+
+  /*fin de la clase para la imagen de el icono negro*/
+
+  /*inicio e la clase de el cuadro que contiene el nombre de el usuario*/
+  .UsuarioX{
+    font-size: 36px;
+    height: 140px;
+    width: 290px;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center; /* Alineación del texto al centro */
+    text-decoration: none;
+    position: absolute;
+    margin-left: 55%;
+     bottom: 20%;
+  }
+
+  .UsuarioX:hover{
+    background-color: rgb(84, 90, 90);
+    transform: translate(0.3px);
+  }
+
+
+
+  @media (max-width: 770px) {
+    .CuadroGrande {
+      width: 90%; /* Ancho ajustado para pantallas más pequeñas */
+      margin: 10% auto; /* Margen automático y centrado */
+      padding: auto;
+    }
+  
+    .div2 {
+      margin-left: 0; /* Elimina el margen izquierdo */
+      left: 50%; /* Centra horizontalmente */
+      transform: translateX(-50%); /* Centra horizontalmente */
+      padding: auto;
+      bottom: 76%;
+ 
+    }
+
+    .Imagen{
+      top: 29%;
+    }
+  
+
+  .UsuarioX{
+    left: 0%;
+    top: 48%;
+  }
+  }
+
+  @media (max-width: 650px) {
+    .CuadroGrande {
+      width: 90%; /* Ancho ajustado para pantallas más pequeñas */
+      margin: 10% auto; /* Margen automático y centrado */
+      padding: auto;
+    }
+  
+    .div2 {
+      margin-left: 0; /* Elimina el margen izquierdo */
+      left: 50%; /* Centra horizontalmente */
+      transform: translateX(-50%); /* Centra horizontalmente */
+      padding: auto;
+      bottom: 76%;
+ 
+    }
+
+    .Imagen{
+      top: 29%;
+    }
+  
+
+  .UsuarioX{
+    left: 30%;
+    top: 48%;
+  }
+  }

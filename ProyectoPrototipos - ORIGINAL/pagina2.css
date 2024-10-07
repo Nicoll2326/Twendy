@@ -1,0 +1,210 @@
+/* Estilos generales para toda la página */
+/*inicio de el encabezado*/
+* {
+    margin: 0; /* Establece márgenes en cero para todos los elementos */
+    padding: 0; /* Establece relleno en cero para todos los elementos */
+    font-family: Arial, Helvetica, sans-serif; /* Define la fuente para toda la página */
+}
+
+/* Estilos del encabezado */
+/*HEADER, la cabecera*/
+header {
+    height: 80px; /* Altura del encabezado */
+    background-color: #4E4E4E; /* Color de fondo del encabezado */
+    padding: 0 50px; /* Relleno interno del encabezado */
+    color: rgb(231, 214, 214); /* Color del texto del encabezado */
+    display: flex; /* Utiliza flexbox para el diseño */
+    justify-content: space-between; /* Distribuye los elementos equitativamente */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+}
+
+/* Estilos del cuerpo */
+body {
+    background: #B1B2B1; /* Color de fondo del cuerpo */
+}
+
+/* Estilos para el texto "Twendy" */
+
+/*la palabra twendy*/
+.Twendy {
+    text-transform: uppercase; /* Transforma todo el texto a mayúsculas */
+    color: white; /* Color del texto */
+    font-weight: 200px; /* Grosor de la fuente (incorrecto, debería ser solo "font-weight: 200;") */
+    font-size: 40px; /* Tamaño de la fuente */
+    text-decoration: none; /* Quita el subrayado (no es relevante para elementos que no son enlaces) */
+}
+
+/* Estilos para todos los enlaces dentro del menú */
+/*todas los links que estan en el encabezado*/
+.menu a {
+    color: #fff; /* Color del texto de los enlaces en el encabezado */
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    text-decoration: none; /* Quita el subrayado */
+    padding: 0 10px; /* Espacio interno de los enlaces (arriba y abajo 0, izquierda y derecha 10px) */
+    transition: 0,4s; /* Transición de 0.4 segundos para efectos de cambio */
+}
+
+a {
+    font-weight: 700; /* Grosor de la fuente para todos los enlaces (sobrescribe el valor anterior solo para los enlaces) */
+}
+
+  /* botones de la x y de la hamburguesa*/
+  
+  .esconder_menu,
+  .mostrar_menu{
+  font-size: 30px;/* tamaño de la letra */
+  cursor: pointer; /* para que se conviertan en un tipo boton*/
+  display: none; /* para que solo se vea en la version reponsive */
+  transition: 0,4s;  /*es el timepo que se demora en aparecer la seccion hamburguesa cuando el dispositivo es mas pequeño*/
+  }
+  
+
+/* Cambia el orden del elemento con la clase mostrar_menu */
+.mostrar_menu {
+    order: 1; /* Define el orden del elemento en el diseño flexbox */
+}
+
+/* Cambia el color del texto a negro al pasar el ratón sobre enlaces del menú, el icono mostrar_menu y el icono esconder_menu */
+.menu a:hover, /* Cambia el color del texto al pasar el ratón sobre los enlaces del menú */
+.mostrar_menu:hover, /* Cambia el color del texto al pasar el ratón sobre el icono de mostrar menú */
+.esconder_menu:hover { /* Cambia el color del texto al pasar el ratón sobre el icono de esconder menú */
+    color: black; /* Color del texto al pasar el ratón */
+}
+
+/* Oculta el elemento con el id check */
+#check {
+    display: none; /* Oculta el elemento */
+}
+  /*RESPONSIVE DEL ENCABEZADO*/
+@media(max-width: 852px){
+    /*HEADER*/
+    .mostrar_menu,
+    .esconder_menu{
+        display: block; /* Hace visible los elementos con clase mostrar_menu y esconder_menu */
+    }
+  
+    .menu{
+        position: fixed; /* Posiciona el elemento de menú fijo en la ventana */
+        width: 100%; /* Ancho completo del viewport */
+        height: 100vh; /* Altura completa del viewport */
+        background-color: #4E4E4E; /* Color de fondo del menú */
+        left: o; /* Error tipográfico: debería ser '0' para posición desde la izquierda */
+        right: -100%; /* Inicialmente fuera del viewport a la derecha */
+        top: 0; /* Alineado al tope de la ventana */
+        text-align: center; /* Texto alineado al centro */
+        padding: 100px 0px; /* Relleno superior e inferior de 100px y ninguno en los lados */
+        z-index: 100; /* Orden de apilamiento del menú sobre otros elementos */
+        transition: 1s; /* Transición animada de 1 segundo */
+    }
+  
+    .menu a{
+        display: block; /* Hace que los elementos de enlace se muestren como bloques */
+        padding: 20px; /* Relleno interior de 20px para los enlaces */
+    }
+  
+    .esconder_menu{
+        position: absolute; /* Posicionamiento absoluto respecto al primer ancestro posicionado */
+        top: 40px; /* Distancia de 40px desde la parte superior */
+        right: 65px; /* Distancia de 65px desde la derecha */
+    }
+    
+    /* Para activar el menú hamburguesa cuando se marque el check */
+    #check:checked ~ .menu{
+        right: 0; /* Muestra el menú desplazándolo hacia la izquierda */
+    }
+    
+} /* Final del bloque de media query para pantallas de ancho máximo de 852px */
+
+/* Fin del encabezado */
+
+/* Estilos del cuadro de el cuadro grando que contiene todos los datos */
+.div2 {
+    max-width: 600px; /* Ancho máximo del cuadro */
+    margin: 40px auto; /* Margen superior e inferior automático, centrado horizontal */
+    background-color:#BCBEC0; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Borde redondeado */
+    text-align: center; /* Alinear texto al centro */
+}
+
+form{
+    text-align: center;
+}
+
+
+.IngresoDeUsuario,
+.Usuario,
+.Contraseña{
+    width: calc(100% - 20px); /* Ancho del campo con margen a izquierda y derecha */
+    max-width: 400px;/*maxico ancho en pantallas grandes- importante para la adaptacion a dispositivos*/
+    height: 30px;
+    padding: 22px; /* Espaciado interno */
+    margin-bottom: 6px; /* Margen inferior */
+    border: 1px solid#FFFFFF; /* Borde */
+    border-radius: 10px; /* Borde redondeado */
+    color: #141414; /*color de la letra*/
+    margin: center; /*margenes centradas*/
+    font-size: 20px; /*tamaño de la letra*/
+}
+
+/*codigo de el botton, es muy importante este codigo - guia*/
+.Ingresar {
+    width: calc(600px); /* Ancho del botón con margen a izquierda y derecha */
+    max-width: 200px;/*maximco ancho en pantallas grandes- importante para la adaptacion a dispositivos*/
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 20px; /* Margen inferior */
+    text-align: center; /* Alinear texto al centro */
+    text-decoration: none; /* Quitar subrayado */
+    border-radius: 4px; /* Borde redondeado */
+    margin: auto; /* 'auto' para centrar horizontalmente */
+    position: absolute; /* Posición absoluta para posicionar el elemento de forma precisa */
+    margin-left: -90px; /* Mover el elemento 50px hacia la izquierda */
+    transition: 0.3px; /* Transición de animación de 0.3 segundos */
+    background-color:  #8F8E8E;
+    font-size: 16px; /* Ajustar tamaño de fuente de botón de ingresar */
+
+}
+
+/*codigo para los efectos especiales cuando el raton se encuentre sobre el boton*/
+.Ingresar:hover {
+    background-color: rgb(84, 90, 90); /* Cambiar color de fondo al pasar el ratón */
+    transform: translate(0.3px); /* es la cantidad de pixeles que se mueve el cuadro ahcie la derecha */
+}
+/* seccion del cuadro*/
+    .div2 {
+        width: 90%; /* Ancho ajustado para cuadro principal en pantallas pequeñas */
+        margin: 20px auto; /* Margen superior e inferior automático, centrado horizontal */
+    }
+
+    .IngresoDeUsuario,
+    .Usuario,
+    .Contraseña,
+    .Ingresar {
+        width: calc(100% - 60px); /* Ancho ajustado para campos y botón en pantallas pequeñas */
+    }
+    /*cuadro de "olvidaste tu contraseña"*/
+.OlvidasteTuContraseña{
+text-decoration: none; /*es para que en los links se quite el subrayado*/
+}
+    
+    /* Ajustes adicionales para max-width: 320px */
+    @media (max-width: 320px) {
+        .menu {
+            width: 100%; /* Ancho completo en pantallas muy pequeñas */
+        }
+
+        .menu a {
+            padding: 10px; /* Reducir espaciado de enlaces para pantallas muy pequeñas */
+        }
+
+        .div2 {
+            width: 95%; /* Ajuste adicional de ancho para cuadro principal en pantallas muy pequeñas */
+        }
+
+        .IngresoDeUsuario,
+        .Usuario,
+        .Contraseña,
+        .Ingresar {
+            width: calc(100% - 10px); /* Ancho ajustado adicional para campos y botón en pantallas muy pequeñas */
+        }
+    }

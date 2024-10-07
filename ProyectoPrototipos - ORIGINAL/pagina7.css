@@ -1,0 +1,304 @@
+/*inicio de el encabezado*/
+* {
+    margin: 0; /* Margenes de la pagina web */
+    padding: 0; 
+    font-family: Arial, Helvetica, sans-serif; /*tipo de letra de toda la pagina*/
+}
+/*HEADER, la cabecera*/
+header{
+    height: 100px;
+    background-color: #4E4E4E; /*color de el encabezado*/
+    padding: 0 50px;
+    color: rgb(231, 214, 214);
+    display: flex; /* */
+    justify-content: space-between; /*para que queden centrados */
+    align-items: center; /* centrados dentro de el contenedor*/
+}
+/* Estilos del cuerpo */
+body {
+    background: #B1B2B1; /* Color de fondo del cuerpo */
+}
+/*la palabra twendy*/
+.Twendy{
+  text-transform: uppercase; /* para qeu todo el textpo quede en mayuscula*/
+  color: white; /*color de la palabra */
+  font-weight: 200px; /* grosor de la palabar */
+  font-size: 40px; /* tamaño de la letra */
+  text-decoration: none; /* quita el subrayado */
+}
+
+/*todas los links que estan en el encabezado*/
+.menu a{
+    color: #fff; /*color de las palabras de el encabezado*/
+    text-transform: uppercase; /* todo en mayusculas*/
+    text-decoration: none; /* quita el subrayado */
+    padding: 0 10px; /* */
+    /* transition: 0,4s; */
+}
+
+a{
+    font-weight: 700; /* grosor de las palabras de el encabezado */
+}
+
+/* botones de la x y de la hamburguesa*/
+
+.esconder_menu,
+.mostrar_menu{
+  font-size: 30px;/* tamaño de la letra */
+  cursor: pointer; /* para que se conviertan en un tipo boton*/
+  display: none; /* para que solo se vea en la version reponsive */
+  transition: 0,4s;  /* */
+}
+
+.mostrar_menu{
+    order: 1;
+}
+
+
+/*inicio de los efectos de color - produce un cambio al situar el ratón encima de un elemento. */
+.menu a:hover,
+.mostrar_menu:hover,
+.esconder_menu:hover{
+    color: black; 
+}
+
+#check{
+    display: none; /*el check ya no sale */
+}
+
+/*RESPONSIVE DEL ENCABEZADO*/
+@media(max-width: 852px){
+    /*HEADER*/
+.mostrar_menu,
+.esconder_menu{
+    display: block;
+}
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #4E4E4E;
+        left: o;
+        right: -100%;
+        top: 0;
+        text-align: center; /*texto alineado a el centro*/
+        padding: 100px 0px; /* de 100 a 0 */
+        z-index: 100;
+        transition: 1s; /* */
+    }
+
+    .menu a{
+        display: block; /* para que las opciones aparezcan uno encima de el otro */
+        padding: 20px; /*separa un poco las opciones*/
+    }
+
+    .esconder_menu{
+        position: absolute; /*permite modificar la posicion de la x */
+        top: 40px; /* modifica la posicion de la x hacia arriba*/
+        right: 65px; /* modifica la posicion de la x a la derecha */
+    }
+    
+    /*para que cuandpo cambie de dispositivo se active el menu de hamburguesa*/
+    #check:checked ~ .menu{
+        right: 0;
+    }
+    
+    } /*caundo el slector este checkeado, todos los elementos de este check seran visibles */
+
+
+/*fin de el encabezado*/
+/* inicio de la clase de el cuadro que dice "Actualizar Datos" , el titulo*/
+.actualizarDatos {
+width: 360px; /* ancho de el cuadro de "Actualiza Datos"*/
+height: 68px; /* alto de el cuadro*/
+background-color:#05161f; /* cooor de el fondo */
+text-align: center; /* alineacion de el texto : centrado*/
+position: absolute; /* posicion*/
+bottom:20%; /* modificar la posicion hacia abajo*/
+left:50%; /* modificar la posicion hacia la izquierda */
+align-items:center; /* controla la alineación de todos los elementos en el eje transversal*/
+font-family: arial; /* tipo de letra : arial*/
+border-radius: 30px;
+/* fin de el cuadro de el titulo*/
+
+}
+/* inicio de el cuadro grande en que esta todo el contenido*/
+.cuadroGrande{
+    width: 1000px; /* Ancho inicial del cuadro */
+    height: 370px; /* Alto inicial del cuadro */
+    background-color: #BCBEC0; /* Color de fondo del cuadro */
+    text-align: center; /* Alineación del texto al centro */
+    font-family: arial; /* Tipo de fuente */
+    position: absolute; /* Posición absoluta para control preciso */
+    bottom: 40px; /* Distancia desde la parte inferior */
+    left: 50%; /* Centrado horizontal inicial */
+    transform: translateX(-50%); /* Ajuste para centrado horizontal */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Borde redondeado */
+    margin: center; /*margenes centradas*/
+    font-size: 20px; /*tamaño de la letra*/
+}
+
+/* fin de el cuadro grande de todo el contenido*/
+
+/*seccion de los botones*/
+.EliminarUsuario,
+.AgregarUsuario,
+.ActualizarDatos {
+    font-size: 30px;
+    padding: 19px;
+    border-radius: 5px;
+    width: 210px;
+    height: 100px;
+    text-align: center;
+    box-sizing: border-box;
+    position: absolute;
+    max-width: 400px; /* Ancho máximo en pantallas grandes */
+    border-radius: 10px; /* Borde redondeado */
+    font-size: 20px; /* Tamaño de la letra */
+}
+
+/* Ajuste de posición vertical para cada elemento */
+.EliminarUsuario {
+    top: 170px; /* Posición inicial desde arriba */
+    left: 20%; /* Alineado a la izquierda */
+}
+
+.AgregarUsuario {
+    top: 60px; /* Separación entre elementos */
+    left: 20%; /* Alineado a la izquierda */
+}
+
+.ActualizarDatos {
+    top: 280px; /* Separación entre elementos */
+    left: 20%; /* Alineado a la izquierda */
+}
+
+.negro{
+    top: 29%; /* Posición inicial desde arriba */
+    left: 35%;
+    z-index: 1;
+    height: 100px;
+    width: 100px;
+    position:fixed;
+}
+
+.Actualizar,
+.Eliminar,
+.Agregar{
+    position: absolute;
+    margin-left: 50%;
+}
+/*efectos cuando el raton esta encima de los botones*/
+.ActualizarDatos:hover,
+.EliminarUsuario:hover,
+.AgregarUsuario:hover{
+background-color: rgb(84, 90, 90);
+transform: translate(0.3px);
+}
+
+
+
+@media (max-width: 768px) {
+
+.Actualizar,
+.Eliminar,
+.Agregar {
+        padding: 10px; /* Reducir el espaciado interno en pantallas pequeñas */
+        align-items: center;
+        display: flex; /**/
+    }
+
+}
+
+/*este codigo ajusta el ancho de los cuadros a la hora de cambiar de dispositivo*/
+
+
+.cuadroGrande{
+    font-size: 5px; 
+    max-width: 800px; /* ancho de el cuadro*/
+    width: calc(100% - 10%); /* Ancho ajustado adicional para campos y botón en pantallas muy pequeñas */
+    padding-left: 20px;/* Reducir el espaciado interno en pantallas pequeñas */
+    padding-top: 2%;
+    justify-content: center; /* Centrar vertical y horizontalmente en pantallas pequeñas */
+    align-items: center;
+    margin-left:auto; /*esto es muy importante, ya que este es el que permite que la posicion de el elemento se centre y sew adapte*/
+    transform: translateX(-50%); /* Ajuste para centrado horizontal */
+     background-color: #BCBEC0;
+
+}
+
+@media (max-width: 768px) {
+    .EliminarUsuario{
+        width: 100%; /* Ancho al 100% del contenedor para centrar en pantallas pequeñas */
+        max-width: none; /* Elimina el ancho máximo */
+        position: relative; /* Cambia a posición relativa para flujo normal del documento */
+        left: auto; /* Reinicia la posición a la izquierda automática */
+        top: 30px; /* Reinicia la posición vertical */
+        align-items: center;
+        margin-left:auto; /*esto es muy importante, ya que este es el que permite que la posicion de el elemento se centre y sew adapte*/
+        transform: translateX(-0%); /* Ajuste para centrado horizontal */
+    }
+
+
+.ActualizarDatos{
+    width: 100%; /* Ancho al 100% del contenedor para centrar en pantallas pequeñas */
+    max-width: none; /* Elimina el ancho máximo */
+    position: relative; /* Cambia a posición relativa para flujo normal del documento */
+    margin: 0 auto; /* Centrado horizontal */
+    top: 150px; /* Separación entre elementos */
+    left: auto; /* Alineado a la izquierda */
+    align-items: center;
+    margin-left:auto; /*esto es muy importante, ya que este es el que permite que la posicion de el elemento se centre y sew adapte*/
+    transform: translateX(-0%); /* Ajuste para centrado horizontal */
+
+}
+
+.AgregarUsuario{
+    width: 100%; /* Ancho al 100% del contenedor para centrar en pantallas pequeñas */
+    max-width: none; /* Elimina el ancho máximo */
+    position: relative; /* Cambia a posición relativa para flujo normal del documento */
+    margin: 0 auto; /* Centrado horizontal */
+    top: 280px; /* Separación entre elementos */
+    left: auto; /* Alineado a la izquierda */
+    align-items: center;
+    margin-left:auto; /*esto es muy importante, ya que este es el que permite que la posicion de el elemento se centre y sew adapte*/
+    transform: translateX(-0%); /* Ajuste para centrado horizontal */
+
+}
+
+@media (max-width: 768px) {
+    
+
+    .negro1,
+    .negro2,
+    .negro3{
+
+            transform: translateX(-35%); /* Ajuste para centrado horizontal */
+
+    }
+    .figure{
+        padding: 10px; /* Reducir el espaciado interno en pantallas pequeñas */
+    height: auto;
+    width: auto;
+    }
+}
+}
+
+
+table {
+    width: 100%;
+    caption-side: bottom;
+    border-collapse: collapse;
+    vertical-align: top;
+    }
+    
+    table * {
+    padding: 0.5rem 0.5rem;
+    border: 1px solid #777
+    }
+    
+    table tr:nth-of-type(odd) {
+    background-color: #ccc
+    }

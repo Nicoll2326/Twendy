@@ -1,0 +1,216 @@
+/*inicio de el encabezado*/
+* {
+    margin: 0; /* Margenes de la pagina web */
+    padding: 0; 
+    font-family: Arial, Helvetica, sans-serif; /*tipo de letra de toda la pagina*/
+}
+/*HEADER, la cabecera*/
+header{
+    height: 80px;
+    background-color: #4E4E4E; /*color de el encabezado*/
+    padding: 0 50px;
+    color: rgb(231, 214, 214);
+    display: flex; /* */
+    justify-content: space-between; /*para que queden centrados */
+    align-items: center; /* centrados dentro de el contenedor*/
+}
+
+/* Estilos del cuerpo */
+body {
+    background: #B1B2B1; /* Color de fondo del cuerpo */
+}
+/*la palabra twendy*/
+.Twendy{
+  text-transform: uppercase; /* para qeu todo el textpo quede en mayuscula*/
+  color: white; /*color de la palabra */
+  font-weight: 200px; /* grosor de la palabar */
+  font-size: 40px; /* tamaño de la letra */
+  text-decoration: none; /* quita el subrayado */
+}
+
+/*todas los links que estan en el encabezado*/
+.menu a{
+    color: #fff; /*color de las palabras de el encabezado*/
+    text-transform: uppercase; /* todo en mayusculas*/
+    text-decoration: none; /* quita el subrayado */
+    padding: 0 10px; /* */
+    /* transition: 0,4s; */
+}
+
+a{
+    font-weight: 700; /* grosor de las palabras de el encabezado */
+}
+
+/* botones de la x y de la hamburguesa*/
+
+.esconder_menu,
+.mostrar_menu{
+  font-size: 30px;/* tamaño de la letra */
+  cursor: pointer; /* para que se conviertan en un tipo boton*/
+  display: none; /* para que solo se vea en la version reponsive */
+  transition: 0,4s;  /* */
+}
+
+.mostrar_menu{
+    order: 1;
+}
+
+
+/*inicio de los efectos de color - produce un cambio al situar el ratón encima de un elemento. */
+.menu a:hover,
+.mostrar_menu:hover,
+.esconder_menu:hover{
+    color: black; 
+}
+
+#check{
+    display: none; /*el check ya no sale */
+}
+
+/*RESPONSIVE DEL ENCABEZADO*/
+@media(max-width: 852px){
+    /*HEADER*/
+.mostrar_menu,
+.esconder_menu{
+    display: block;
+}
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #4E4E4E;
+        left: o;
+        right: -100%;
+        top: 0;
+        text-align: center; /*texto alineado a el centro*/
+        padding: 100px 0px; /* de 100 a 0 */
+        z-index: 100;
+        transition: 1s; /* */
+    }
+
+    .menu a{
+        display: block; /* para que las opciones aparezcan uno encima de el otro */
+        padding: 20px; /*separa un poco las opciones*/
+    }
+
+    .esconder_menu{
+        position: absolute; /*permite modificar la posicion de la x */
+        top: 40px; /* modifica la posicion de la x hacia arriba*/
+        right: 65px; /* modifica la posicion de la x a la derecha */
+    }
+    
+    /*para que cuandpo cambie de dispositivo se active el menu de hamburguesa*/
+    #check:checked ~ .menu{
+        right: 0;
+    }
+    
+    } /*caundo el slector este checkeado, todos los elementos de este check seran visibles */
+
+
+/*fin de el encabezado*/
+/**/
+
+.container form {
+    background-color: rgb(218, 213, 212);
+    height: 620px;
+    width: 700px;
+    max-width: 100%; /* Ancho máximo del formulario */
+    background-color: #BCBEC0;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    margin: auto;
+    font-size: 22px;
+    min-width: none;
+}
+
+
+
+/* Cambios a los inputs */
+.espacio1,
+.espacio2,
+.espacio3,
+.espacio4,
+.espacio5,
+.espacio6 {
+    width: 100%; /* Ancho completo */
+    max-width: 400px; /* Máximo ancho permitido */
+    min-width: none;
+    height: 36px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    padding: 0 10px; /* Espaciado interno */
+}
+
+
+/* Selector de desplegable */
+.desplieje{
+    width: 100%;
+    max-width: 500px;
+    height: 36px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    background-color: #373a418f;
+    color: rgb(17, 9, 6);
+    font-size: 20px;
+
+}
+
+/* Botones */
+.boton{
+    font-size: 16px;
+    width: calc(50% - 60px);
+    max-width: 200px;
+    padding: 12px;
+    border-radius: 5px;
+    width: 120px;
+    text-align: center; /* Alineación del texto al centro */
+    box-sizing: border-box; /* Incluye el padding y border en el ancho total */
+}
+
+
+.contenedor{
+    display:flex;
+    align-items: center;
+}
+
+/* Hover de los botones */
+.boton:hover:hover {
+    background-color: rgb(84, 90, 90);
+    transform: translate(0.3px);
+
+}
+
+/* Media queries para responsive design */
+@media (max-width: 768px) {
+    .container form {
+        width: 90%; /* Reducir el ancho en pantallas pequeñas */
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    .espacio1,
+    .espacio2,
+    .espacio3,
+    .espacio4,
+    .espacio5,
+    .espacio6,
+    .desplieje {
+        max-width: 100%; /* Ajustar anchos a la pantalla pequeña */
+        padding: 6px;
+    }
+
+
+    .boton {
+        width: 100%; /* Ancho completo para botones en pantallas pequeñas */
+        max-width: 100%;
+        padding: 10px;
+    }
+
+  
+}
+
+
+
+
